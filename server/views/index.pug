@@ -1,0 +1,17 @@
+extends layout
+
+block layout-content
+  div.view.welcome-view
+    h1.banner Ut enim
+    div.message
+      div.message__title
+        h3 Excepteur sint occaecat
+        h1 Habitant morbi
+      span.message__details Access the Ut enim Team Portal
+    div.nav-buttons
+      if isAuthenticated
+        a(href="/user")
+          div.nav-button Just dive in!
+      else
+        a(href="/login")
+          div.nav-button Log in

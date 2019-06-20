@@ -5,22 +5,25 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./server/index.js",
-    "dev": "nodemon ./server/index.js --watch ./server"
+    "dev": "nodemon ./server/index.js --watch ./server",
+    "ui": "browser-sync start --proxy=localhost:8000 --files='**/*.css, **/*.pug, **/*.js' --ignore=node_modules --reload-delay 10 --no-ui --no-notify"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/imoralescs/node-express.git"
   },
-  "author": "",
+  "author": "Israel Morales",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/imoralescs/node-express/issues"
   },
   "homepage": "https://github.com/imoralescs/node-express#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "nodemon": "^1.19.1"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
   }
 }
